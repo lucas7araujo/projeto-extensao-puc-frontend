@@ -1,0 +1,446 @@
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #2563eb;
+    --accent-blue: #3b82f6;
+    --light-blue: #60a5fa;
+    --red-emergency: #ac0e0e;
+    --red-dark: #991b1b;
+    --text-dark: #1e293b;
+    --text-light: #ffffff;
+    --bg-light: #f0f9ff;
+    --bg-white: #ffffff;
+    --shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+    --shadow-lg: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    background: var(--bg-white);
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    color: var(--light-blue);
+}
+
+/* Seção de Apresentação */
+.apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 5rem 10%;
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    align-items: center;
+}
+
+.texto h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.texto p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+    border: 3px solid var(--accent-blue);
+}
+
+.imagem img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3);
+}
+
+/* Seção de Denúncias */
+.denuncias {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 5rem 10%;
+    text-align: center;
+    position: relative;
+}
+
+.denuncias::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+}
+
+.denuncias h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.botoes-denuncia {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.botao-vermelho {
+    background: linear-gradient(135deg, var(--red-emergency) 0%, var(--red-dark) 100%);
+    color: var(--text-light);
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao-vermelho::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.botao-vermelho:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.botao-vermelho:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5);
+    border-color: var(--text-light);
+}
+
+.botao-vermelho:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Seção de Formulário */
+.formulario {
+    padding: 5rem 10%;
+    background: var(--bg-light);
+}
+
+.formulario h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+#feedbackForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--light-blue);
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #bfdbfe;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    background: var(--bg-light);
+}
+
+#feedbackForm textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+#feedbackForm button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-blue) 100%);
+}
+
+#feedbackForm button:active {
+    transform: translateY(-1px);
+}
+
+#formStatus {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(37, 99, 235, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .apresentacao {
+        grid-template-columns: 1fr;
+        padding: 3rem 5%;
+    }
+
+    .texto h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        padding: 2rem;
+        gap: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .botoes-denuncia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao-vermelho {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #feedbackForm {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .texto h1 {
+        font-size: 2rem;
+    }
+
+    .texto p {
+        font-size: 1rem;
+    }
+
+    .denuncias h2,
+    .formulario h2 {
+        font-size: 2rem;
+    }
+
+    .botao-vermelho {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    #feedbackForm {
+        padding: 1.5rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.apresentacao,
+.denuncias,
+.formulario {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Melhorias de Acessibilidade */
+*:focus {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+a:focus,
+button:focus {
+    outline-color: var(--light-blue);
+}
+
+/* Efeitos especiais */
+.botao-vermelho,
+#feedbackForm button {
+    position: relative;
+    z-index: 1;
+}
+
