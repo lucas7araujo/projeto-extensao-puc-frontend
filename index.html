@@ -1,66 +1,114 @@
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Denúncia de Trabalho Escravo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">Proteção Trabalhista</div>
-      <button class="menu-toggle" id="menuToggle">&#9776;</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#contato">Contato</a>
-        <a href="cadastro.html">Cadastro</a>
-        <a href="#numeros">Números de Emergência</a>
-        <a href="#sobre">Sobre Nós</a>
-      </nav>
-    </header>
 
-    <section class="apresentacao" id="sobre">
-      <div class="texto">
-        <h1>Projeto de Combate ao Trabalho Escravo</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          malesuada, turpis nec fermentum interdum, tellus libero faucibus
-          neque, a egestas urna velit et sapien.
-        </p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Combate ao Trabalho Análogo à Escravidão — Mock</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="hero">
+    <div class="wrap container">
+      <h1>Combate ao Trabalho Análogo à Escravidão</h1>
+      <div class="subtitle">Informação, acolhimento e denúncia em um só lugar.</div>
+      <div class="btn-row">
+        <button class="btn btn-danger">Denunciar</button>
+        <button id="btnDireitos" class="btn btn-outline" type="button">Saber meus direitos</button>
+        <button class="btn btn-outline"><a href="cadastro.html">Cadastrar vítimas</a></button>
       </div>
-      <div class="imagem">
-        <img src="image.png" alt="Imagem ilustrativa" />
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>O que é Trabalho Análogo à Escravidão?</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fa-solid fa-hourglass-half card-icon"></i>
+          <p>Jornada exaustiva</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-triangle-exclamation card-icon"></i>
+          <p>Condições degradantes</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-handcuffs card-icon"></i>
+          <p>Servidão por dívida</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-briefcase card-icon"></i>
+          <p>Trabalho forçado</p>
+        </div>
+      </div>
+      <a class="cta-blue" href="#">Ver mais conteúdos educativos</a>
+    </section>
+
+    <section id="direitos" class="section">
+      <h2>Direitos Trabalhistas</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fa-solid fa-file-lines"></i>
+          <p>Textos informativos</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-play"></i>
+          <p>Materiais educativos</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-newspaper"></i>
+          <p>Notícias</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-tv"></i>
+          <p>Depoimentos reais</p>
+        </div>
       </div>
     </section>
 
-    <section class="formulario" id="contato">
-      <h2>Envie seu Feedback</h2>
-      <form id="feedbackForm">
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" />
-        <input type="email" id="email" name="email" placeholder="Seu email" />
-        <textarea
-          id="mensagem"
-          name="mensagem"
-          placeholder="Sua mensagem"
-        ></textarea>
-        <button type="submit">Enviar</button>
-        <p id="formStatus"></p>
+    <section id="denuncia" class="section">
+      <h2>Denúncia Segura</h2>
+      <form class="report-form" onsubmit="event.preventDefault();alert('Denúncia enviada (mock)')">
+        <div class="row">
+          <div class="field"><input placeholder="Local do ocorrido" required></div>
+          <div class="field"><input placeholder="Tipo de violação" required></div>
+        </div>
+        <div style="margin-top:12px"><textarea placeholder="Descrição"></textarea></div>
+        <button class="submit">ENVIAR DENÚNCIA</button>
       </form>
     </section>
 
-    <section class="denuncias" id="numeros">
-      <h2>Denuncie</h2>
-      <div class="botoes-denuncia">
-        <a href="tel:100" class="botao-vermelho">Disque 100</a>
-        <a href="tel:180" class="botao-vermelho">Disque 180</a>
-        <a href="tel:190" class="botao-vermelho">Polícia - 190</a>
+    <section class="section">
+      <h2>Acolhimento e Apoio</h2>
+      <div class="support-grid">
+        <div class="support">
+          <div class="icon">🗨️</div>
+          <div>
+            <strong>Acolhimento Psicológico</strong>
+            <div class="small">Chat rápido ou agendamento</div>
+          </div>
+        </div>
+        <div class="support">
+          <div class="icon">⚖️</div>
+          <div>
+            <strong>Acolhimento Jurídico</strong>
+            <div class="small">Orientação preliminar, sem compromisso</div>
+          </div>
+        </div>
       </div>
     </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
 
-    <footer>
-      <p>Feito pelo curso de Sistemas de Informação da PUC Betim</p>
-      <p>Bernardo Lomas, Gustavo Almeida, <br>Lucas Araújo,  Matheus Henrique.</p>
-    </footer>
-    
-    <div class="overlay"></div>
-    <script src="script.js"></script>
-  </body>
 </html>
