@@ -66,3 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function Psicologia(){
+    window.location.href = "psicologia.html"
+}
+
+function Direito(){
+    window.location.href = "direito.html"
+}

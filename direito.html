@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos Trabalhistas</title>
+    <link rel="stylesheet" href="direito.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">← Voltar</a>
+            <span class="page-title">Direitos Trabalhistas</span>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top:40px; padding-bottom:40px;">
+        <h1 class="title">Informações Jurídicas e Direitos</h1>
+        <p class="subtitle" style="color: black;">Guia prático para pessoas em situação de trabalho análogo à escravidão.</p>
+
+        <section class="section">
+            <h2>Passos imediatos</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>O que fazer primeiro</h3>
+                    <ol class="list">
+                        <li><strong>Garanta sua segurança</strong> e procure ajuda próxima.</li>
+                        <li><strong>Registre provas:</strong> fotos, mensagens, horários, recibos.</li>
+                        <li><strong>Procure atendimento especializado</strong> (Defensoria, MPT, sindicato).</li>
+                        <li><strong>Guarde documentos</strong> importantes como contratos e anotações.</li>
+                    </ol>
+                </div>
+                <div class="card">
+                    <h3>Documentos úteis</h3>
+                    <ul class="list">
+                        <li>Documento pessoal (RG/CPF)</li>
+                        <li>Comprovante de endereço</li>
+                        <li>Recibos ou comprovantes de pagamento</li>
+                        <li>Fotos da jornada e ambiente</li>
+                    </ul>
+                    <button class="btn-outline" onclick="baixarChecklist()">Baixar checklist (PDF)</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Entenda seus direitos</h2>
+
+            <details class="card details">
+                <summary>Direitos trabalhistas imediatos</summary>
+                <p>Se houve vínculo trabalhista, você tem direito à carteira assinada retroativa, FGTS, férias e 13º não
+                    pagos, além de possíveis indenizações.</p>
+            </details>
+
+            <details class="card details">
+                <summary>Proteção criminal</summary>
+                <p>O empregador pode responder criminalmente por trabalho análogo à escravidão. Denúncias podem ser
+                    registradas no MPT, Delegacia do Trabalho e Polícia.</p>
+            </details>
+
+            <details class="card details">
+                <summary>Assistência jurídica gratuita</summary>
+                <p>A Defensoria Pública oferece orientação e defesa sem custos. Sindicatos e ONGs também atuam no apoio
+                    e encaminhamento.</p>
+            </details>
+        </section>
+
+        <section class="section">
+            <h2>Contatos importantes</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <strong>Disque 100</strong>
+                    <p>Denúncias 24h de violações de direitos humanos.</p>
+                </div>
+                <div class="card">
+                    <strong>Ministério Público do Trabalho</strong>
+                    <p>Recebe denúncias e investiga irregularidades.</p>
+                </div>
+                <div class="card">
+                    <strong>Defensoria Pública</strong>
+                    <p>Atendimento jurídico gratuito em todas as regiões.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function baixarChecklist() {
+            const path = '/mnt/data/checklist-direitos-trabalhistas-mock.pdf';
+            const a = document.createElement('a');
+            a.href = path;
+            a.download = 'checklist-direitos.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acolhimento Psicológico</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="psicologia.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">← Voltar</a>
+      <span class="page-title">Acolhimento Psicológico</span>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:40px; padding-bottom:40px;">
+    <h1 class="title">Ajuda Psicológica e Acolhimento</h1>
+    <p class="subtitle">Suporte emocional, orientação e acesso rápido a ajuda profissional.</p>
+
+    <!-- INÍCIO - SEÇÃO PRINCIPAL -->
+    <section class="section">
+      <h2>Como podemos ajudar</h2>
+      <div class="grid-2">
+
+        <div class="card">
+          <h3>Agendamento de Atendimento</h3>
+          <p>Permite marcar um horário para conversar com um psicólogo parceiro. Atendimento gratuito e sigiloso.</p>
+          <button class="btn-outline" onclick="abrirAgenda()">Agendar Atendimento</button>
+        </div>
+
+        <div class="card">
+          <h3>Chat Rápido</h3>
+          <p>Canal rápido para suporte emocional imediato. Um atendente especializado responderá em instantes.</p>
+          <button class="btn-outline" onclick="abrirChat()">Entrar no Chat</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES ÚTEIS -->
+    <section class="section">
+      <h2>Quando buscar ajuda</h2>
+      <details class="card details">
+        <summary>Sintomas emocionais preocupantes</summary>
+        <p>Ansiedade intensa, medo constante, insônia, tristeza profunda ou sensação de desamparo.</p>
+      </details>
+
+      <details class="card details">
+        <summary>Após situações traumáticas</summary>
+        <p>Se você passou por violência, exploração laboral, ameaças ou pressão psicológica.</p>
+      </details>
+
+      <details class="card details">
+        <summary>Se você precisa conversar</summary>
+        <p>Mesmo quando não há urgência, falar com um profissional pode ajudar no processo emocional.</p>
+      </details>
+    </section>
+
+    <!-- CONTATOS IMPORTANTES -->
+    <section class="section">
+      <h2>Serviços de Apoio</h2>
+      <div class="grid-3">
+        <div class="card">
+          <strong>Centro de Valorização da Vida - 188</strong>
+          <p>Atendimento emocional 24h e gratuito.</p>
+        </div>
+        <div class="card">
+          <strong>CAPS (SUS)</strong>
+          <p>Atendimento psicológico e psiquiátrico público.</p>
+        </div>
+        <div class="card">
+          <strong>Serviços Municipais</strong>
+          <p>Postos de saúde e centros de referência oferecem acolhimento.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function abrirAgenda() {
+      alert('Aqui abrirá a página ou modal de agendamento.');
+    }
+
+    function abrirChat() {
+      alert('Aqui abrirá o chat rápido de suporte emocional.');
+    }
+  </script>
+
+</body>
+</html>
